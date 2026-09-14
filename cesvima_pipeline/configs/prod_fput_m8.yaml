@@ -1,0 +1,21 @@
+run_tag: "prod_fput_m8"
+output_dir: "cesvima_output"
+description: "Fermi-Pasta-Ulam-Tsingou (dof=4, m=8) non-linear lattice chain"
+
+system:
+  name: "fput"
+  dof: 4
+  alpha: 0.25
+  beta: 0.10
+  dt_out: 0.01
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

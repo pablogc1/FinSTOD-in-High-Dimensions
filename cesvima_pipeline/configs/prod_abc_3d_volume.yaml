@@ -1,0 +1,21 @@
+run_tag: "prod_abc_3d_volume"
+output_dir: "cesvima_output"
+description: "Arnold-Beltrami-Childress (ABC) Flow full 3D Volumetric Cube (120x120x120)"
+
+system:
+  name: "abc"
+  A: 1.0
+  B: 1.0
+  C: 1.0
+  dt_out: 0.01
+
+grid:
+  mode: "volume_3d"
+  n_cells: 120
+  stride: 1
+  axes: [0, 1, 2]
+
+n_levels: 2000
+rule: "strict"
+num_shards: 75
+compute_ftle: false

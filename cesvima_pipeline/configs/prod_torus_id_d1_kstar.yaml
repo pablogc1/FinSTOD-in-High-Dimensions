@@ -1,0 +1,23 @@
+run_tag: "prod_torus_id_d1_kstar"
+output_dir: "cesvima_output"
+description: "Integrable torus m=6 d=1 basis=identity, 1000x1000, pair_kstar stored for graded d-hat"
+
+system:
+  name: "integrable_torus"
+  m: 6
+  d: 1
+  basis: "identity"
+  twist: 0.35
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2000
+rule: "strict"
+num_shards: 60
+compute_ftle: true
+store_pair_diagnostics: true

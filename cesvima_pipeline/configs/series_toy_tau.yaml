@@ -1,0 +1,6 @@
+# Tiny tau series to exercise kind: tau_series on CESVIMA.
+# Writes only toy_*_tau* directories. Leaves prod_abc_flow_m3 / prod_fput_m8 alone.
+kind: tau_series
+description: "Toy ABC + FPUT m=8 at tau=0.2 and 0.5 (L=20, 50)"
+taus: [0.2, 0.5]
+members: ["toy_abc_flow.yaml", "toy_fput_m8.yaml"]

@@ -1,0 +1,8 @@
+# Tau envelope for ABC and FPUT m=8. Does not include tau=25 (already on disk
+# as prod_abc_flow_m3 and prod_fput_m8). Each member writes to
+#   <production_tag>_tauNN
+# so those two directories are never opened for write.
+kind: tau_series
+description: "ABC m=3 and FPUT m=8 at tau=5,10,15,20 (FTLE on, 1000x1000)"
+taus: [5, 10, 15, 20]
+members: ["prod_abc_flow_m3.yaml", "prod_fput_m8.yaml"]

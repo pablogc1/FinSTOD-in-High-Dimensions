@@ -1,0 +1,20 @@
+run_tag: "prod_lorenz96_m4_L1000"
+output_dir: "cesvima_output"
+description: "Lorenz-96 m=4, 1000x1000, L=1000 (Phase 10 type census)"
+
+system:
+  name: "lorenz96"
+  m: 4
+  F: 8.0
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 1000
+rule: "strict"
+num_shards: 60
+compute_ftle: true

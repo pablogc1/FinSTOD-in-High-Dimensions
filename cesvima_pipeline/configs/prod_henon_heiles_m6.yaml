@@ -1,0 +1,22 @@
+# Production High-Definition: 3-DoF Henon-Heiles (m=6)
+# Resolution: 1000 x 1000 = 1,000,000 cells across 2m=12 neighbours
+run_tag: "prod_henon_heiles_m6_1000x1000"
+output_dir: "cesvima_output"
+
+system:
+  name: "henon_heiles"
+  dof: 3
+  energy: 0.12
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1             # 1000 x 1000 = 1,000,000 cells
+  axes: [0, 1]          # (x0, x1) plane
+
+n_levels: 2000
+num_shards: 60          # 60 array tasks (well within CESVIMA account submit limit)
+q: null                 # q=m
+rule: "strict"
+compute_ftle: true

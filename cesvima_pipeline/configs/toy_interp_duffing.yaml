@@ -1,0 +1,21 @@
+run_tag: "toy_interp_duffing"
+output_dir: "cesvima_output"
+description: "Tiny coupled Duffing for interpretation smoke test"
+
+system:
+  name: "coupled_duffing"
+  d: 1
+  kappa: 0.0
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 40
+  stride: 4
+  axes: [0, 1]
+
+n_levels: 80
+num_shards: 2
+q: null
+rule: "strict"
+compute_ftle: true

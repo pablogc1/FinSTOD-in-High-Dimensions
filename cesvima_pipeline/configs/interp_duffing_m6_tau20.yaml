@@ -1,0 +1,21 @@
+# Coupled Duffing (x1, x2) rest slice at τ=20.
+run_tag: "interp_duffing_m6_tau20"
+output_dir: "cesvima_output"
+
+system:
+  name: "coupled_duffing"
+  d: 3
+  kappa: 0.15
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 10000
+num_shards: 60
+q: null
+rule: "strict"
+compute_ftle: true

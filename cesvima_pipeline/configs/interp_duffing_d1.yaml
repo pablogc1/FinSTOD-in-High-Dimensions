@@ -1,0 +1,23 @@
+# Published 2-D Duffing: one oscillator, (x, v), τ=20.
+# Does not open prod_duffing_m6_1000x1000.
+run_tag: "interp_duffing_d1"
+output_dir: "cesvima_output"
+description: "Published Duffing (d=1, x-v plane, tau=20) continuity check"
+
+system:
+  name: "coupled_duffing"
+  d: 1
+  kappa: 0.0
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 10000
+num_shards: 60
+q: null
+rule: "strict"
+compute_ftle: true

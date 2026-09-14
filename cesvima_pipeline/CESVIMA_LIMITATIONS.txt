@@ -1,0 +1,28 @@
+Límites de ejecución
+Para facilitar una utilización eficiente de los recursos se han establecido una serie de límites. Estos límites permiten cierta flexibilidad para acomodar la ejecución de múltiples trabajos.
+
+El principal límite es el trabajo máximo que se puede enviar al sistema. En el caso de la partición standard se pueden solicitar 600 cores o lo que es equivalente 2400 GiB de memoria RAM durante 72 horas. Sin embargo, es posible incrementar la duración de un trabajo si se solicitan menos cores (Ej.: se puede reservar 300 cores y 1200 GiB de RAM, que equivaldría a la mitad, hasta 144 horas, el doble de tiempo) aunque nunca se puede superar las 160 horas.
+
+Partition	Recursos máximos (duración máxima)	Duración máxima
+standard	
+600 cores = 2400 GiB (72 horas)
+
+160 horas
+standard-gpu	
+8 GPUs (72 horas)
+
+160 horas
+debug	
+48 cores = 160 GiB (15 minutos)
+
+1 hora
+debug-gpu	
+4 GPUs (5 minutos)
+
+20 minutos
+Los límites establecen una cota máxima siendo válida cualquier combinación que los cumpla.
+
+En el caso de las particiones con GPU se aplican adicionalmente los límites de CPU y RAM de su partición equivalente.
+
+Es muy importante hacer un uso correcto de los recursos, solicitando únicamente los necesarios (con cierto margen de seguridad) para la ejecución de cada trabajo. Esto facilita la planificación y hace que el trabajo pueda entrar antes a ejecutar.
+

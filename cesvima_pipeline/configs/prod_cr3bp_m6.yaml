@@ -1,0 +1,19 @@
+run_tag: "prod_cr3bp_m6"
+output_dir: "cesvima_output"
+description: "Spatial Circular Restricted 3-Body Problem (m=6) Earth-Moon System"
+
+system:
+  name: "cr3bp"
+  mu: 0.01215
+  dt_out: 0.005
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

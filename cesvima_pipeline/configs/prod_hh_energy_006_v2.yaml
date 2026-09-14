@@ -1,0 +1,20 @@
+run_tag: "prod_hh_energy_006_v2"
+output_dir: "cesvima_output"
+description: "Hénon-Heiles dof=3, E_max=0.06 with valid_cells applied in slice mode (v2)"
+
+system:
+  name: "henon_heiles"
+  dof: 3
+  energy_max: 0.06
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

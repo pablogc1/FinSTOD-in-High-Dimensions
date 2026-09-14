@@ -1,0 +1,22 @@
+# Tiny FPUT m=8 template for tau-series dry runs. Not a production tag.
+run_tag: "toy_fput_m8"
+output_dir: "cesvima_output"
+description: "Toy FPUT m=8 20x20 for pipeline tau-series checks"
+
+system:
+  name: "fput"
+  dof: 4
+  alpha: 0.25
+  beta: 0.10
+  dt_out: 0.01
+
+grid:
+  mode: "slice"
+  n_cells: 40
+  stride: 2
+  axes: [0, 1]
+
+n_levels: 50
+rule: "strict"
+num_shards: 2
+compute_ftle: true

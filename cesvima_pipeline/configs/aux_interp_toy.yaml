@@ -1,0 +1,5 @@
+kind: interp_aux
+aux_kind: interp_bundle
+aux_prefix: aux_interp_
+description: "Toy LD/FLI bundle on tiny interpretation tags"
+sources: ["toy_interp_duffing", "toy_interp_bickley"]

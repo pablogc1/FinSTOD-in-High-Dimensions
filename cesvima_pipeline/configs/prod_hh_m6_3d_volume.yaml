@@ -1,0 +1,20 @@
+run_tag: "prod_hh_m6_3d_volume"
+output_dir: "cesvima_output"
+description: "Henon-Heiles 3-DoF (m=6) 3D Configuration Space Volume (100x100x100 on q1, q2, q3)"
+
+system:
+  name: "henon_heiles"
+  dof: 3
+  energy_max: 0.12
+  dt_out: 0.002
+
+grid:
+  mode: "volume_3d"
+  n_cells: 100
+  stride: 1
+  axes: [0, 1, 2]
+
+n_levels: 2000
+rule: "strict"
+num_shards: 75
+compute_ftle: false

@@ -1,0 +1,6 @@
+kind: interp_aux
+aux_kind: duffing_basins
+aux_prefix: aux_basins_
+n_levels: 120
+description: "Toy Duffing basins"
+sources: ["toy_interp_duffing"]

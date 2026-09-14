@@ -1,0 +1,21 @@
+run_tag: "test2_bickley_pure_shear"
+output_dir: "cesvima_output"
+description: "Unperturbed Bickley jet (eps=0): analytic λ≡0 shear-barrier test at 1000x1000"
+
+system:
+  name: "bickley_jet"
+  U: 1.0
+  L: 1.0
+  eps: [0.0, 0.0, 0.0]
+  dt_out: 0.04
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 1500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

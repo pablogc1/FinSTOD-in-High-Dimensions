@@ -1,0 +1,20 @@
+run_tag: "prod_froeschle_L8000"
+output_dir: "cesvima_output"
+description: "Froeschlé m=4, K=0.30, 1000x1000, L=8000 (Phase 10 censoring envelope)"
+
+system:
+  name: "froeschle"
+  dof: 2
+  K: 0.30
+  dt_out: 0.01
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 8000
+rule: "strict"
+num_shards: 60
+compute_ftle: true

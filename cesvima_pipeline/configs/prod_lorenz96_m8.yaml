@@ -1,0 +1,22 @@
+# Production Ultra High-Definition: Lorenz 96 (m=8)
+# Resolution: 1000 x 1000 = 1,000,000 cells across 2m=16 neighbours
+run_tag: "prod_lorenz96_m8_1000x1000"
+output_dir: "cesvima_output"
+
+system:
+  name: "lorenz96"
+  m: 8
+  F: 8.0
+  dt_out: 0.002
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1             # 1000 x 1000 = 1,000,000 cells
+  axes: [0, 1]
+
+n_levels: 2000
+num_shards: 75          # 75 array tasks (well within CESVIMA account submit limit)
+q: null                 # q=m
+rule: "strict"
+compute_ftle: true

@@ -1,0 +1,20 @@
+run_tag: "prod_froeschle_K005"
+output_dir: "cesvima_output"
+description: "Froeschlé m=4, K=0.05, 1000x1000, L=2500 (Phase 10 K-sweep; does not overwrite K=0.30)"
+
+system:
+  name: "froeschle"
+  dof: 2
+  K: 0.05
+  dt_out: 0.01
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

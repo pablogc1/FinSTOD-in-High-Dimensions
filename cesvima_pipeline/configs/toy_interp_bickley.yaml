@@ -1,0 +1,21 @@
+run_tag: "toy_interp_bickley"
+output_dir: "cesvima_output"
+description: "Tiny perturbed Bickley for interpretation smoke test"
+
+system:
+  name: "bickley_jet"
+  U: 1.0
+  L: 1.0
+  eps: [0.075, 0.15, 0.3]
+  dt_out: 0.04
+
+grid:
+  mode: "slice"
+  n_cells: 40
+  stride: 4
+  axes: [0, 1]
+
+n_levels: 40
+num_shards: 2
+rule: "strict"
+compute_ftle: true

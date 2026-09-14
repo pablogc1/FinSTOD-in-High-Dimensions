@@ -1,0 +1,21 @@
+run_tag: "prod_abc_flow_m3"
+output_dir: "cesvima_output"
+description: "Arnold-Beltrami-Childress (ABC) 3D Euler Flow (m=3) 2D slice"
+
+system:
+  name: "abc"
+  A: 1.0
+  B: 1.0
+  C: 1.0
+  dt_out: 0.01
+
+grid:
+  mode: "slice"
+  n_cells: 1000
+  stride: 1
+  axes: [0, 1]
+
+n_levels: 2500
+rule: "strict"
+num_shards: 60
+compute_ftle: true

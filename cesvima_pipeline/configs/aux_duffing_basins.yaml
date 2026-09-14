@@ -1,0 +1,8 @@
+# Long Duffing well / attractor identity (τ=40 at dt=0.002).
+# State-only; does not recompute FinSTOD.
+kind: interp_aux
+aux_kind: duffing_basins
+aux_prefix: aux_basins_
+n_levels: 20000
+description: "Duffing long-time well identity"
+sources: ["prod_duffing_m6_1000x1000", "interp_duffing_d1", "interp_duffing_m6_xv", "interp_duffing_m6_tau20"]

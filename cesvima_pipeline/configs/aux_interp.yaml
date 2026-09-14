@@ -1,0 +1,9 @@
+# LD (p=1 and p=0.5), FLI, FTRN, time-aware FTLE on existing and new tags.
+# FPUT sources also store modal energies; Duffing sources also store wells at window end.
+# Not part of `all`. Activate with PHASES=13 or:
+#   sbatch --export=ALL,CFG=configs/aux_interp.yaml master_pipeline.slurm
+kind: interp_aux
+aux_kind: interp_bundle
+aux_prefix: aux_interp_
+description: "LD/FLI/FTRN/FTLE identity suite"
+sources: ["test2_bickley_jet_shear", "test2_bickley_pure_shear", "prod_duffing_m6_1000x1000", "prod_fput_m8", "prod_fput_m8_tau05", "prod_fput_m8_tau10", "prod_fput_m8_tau15", "prod_fput_m8_tau20", "prod_froeschle_dof2_m4", "interp_duffing_d1", "interp_duffing_m6_xv", "interp_duffing_m6_tau10", "interp_duffing_m6_tau20", "interp_duffing_m6_tau40", "interp_duffing_m6_clip", "interp_bickley_pure_long"]
