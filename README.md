@@ -153,3 +153,9 @@ Please cite the two-dimensional paper above and this repository:
   howpublished = {\url{https://github.com/pablogc1/FinSTOD-in-High-Dimensions}}
 }
 ```
+
+## AI assistance
+
+Claude Opus 4.6 (Anthropic) was used as an assistant to write the code.
+All code was reviewed, verified, and edited by the authors, who accept
+full responsibility for the repository.
