@@ -37,6 +37,7 @@ cesvima_pipeline/
   worker.slurm           FinSTOD + FTLE array workers
   worker_aux.slurm       LD / FLI / time-aware FTLE on existing tags
 diagnostics/             paper figure scripts (optional)
+docs/                    interactive ABC and Lorenz-96 volume cubes
 requirements.txt
 ```
 
@@ -124,6 +125,20 @@ Paper figures from aggregated NPZs:
 python diagnostics/plot_paper_atlas.py
 python diagnostics/plot_paper_indicators.py
 ```
+
+## Interactive cubes
+
+The ABC and Lorenz-96 volumes are rotatable cubes (field on the six faces).
+GitHub’s file view will not run them; they are served as GitHub Pages:
+
+- <https://pablogc1.github.io/FinSTOD-in-High-Dimensions/>
+- <https://pablogc1.github.io/FinSTOD-in-High-Dimensions/abc_volume_cube.html>
+- <https://pablogc1.github.io/FinSTOD-in-High-Dimensions/lorenz_volume_cube.html>
+
+Enable Pages once: repository **Settings → Pages → Build and deployment**,
+source **Deploy from a branch**, branch **`main`**, folder **`/docs`**.
+The Lorenz cube is a 3-D cut of an \(m=6\) system, not the full six-dimensional
+state.
 
 ## Citation
 
